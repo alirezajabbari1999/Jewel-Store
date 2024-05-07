@@ -1,0 +1,25 @@
+.banners-section-container{
+  
+}
+
+.banners-section-container .banners-section-row{
+
+}
+
+.banners-section-container .banners-section-row .banners-section-col{
+
+}
+
+.banners-section-container .banners-section-row .banners-section-col .image-container{
+  border-radius: 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95%;
+}
+
+.banners-section-container .banners-section-row .banners-section-col .image-container img{
+  width: 100%;
+  height: 100%;
+}

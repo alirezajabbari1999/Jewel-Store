@@ -1,0 +1,130 @@
+.topbar-container{
+  padding: 1rem 2.5rem;
+}
+
+.topbar-container .topbar-row{
+  justify-content: space-between;
+}
+
+.topbar-container .topbar-right{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.topbar-container .topbar-right .topbar-logo{
+
+}
+
+.topbar-container .topbar-right .topbar-logo .logo-link{
+
+}
+
+.topbar-container .topbar-right .topbar-logo .logo-link .logo-img{
+  width: 14rem;
+}
+
+.topbar-container .topbar-right .search-box{
+  border: 2px solid var(--light-gray);
+  padding: 1rem;
+  border-radius: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 60rem;
+}
+
+.topbar-container .topbar-right .search-box .search-icon{
+  font-size: 2.7rem;
+}
+
+.topbar-container .topbar-right .search-box input{
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.topbar-container .topbar-right .search-box input::placeholder{
+  color: #999;
+}
+
+.topbar-container .topbar-right .select-city-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 1.3rem;
+  padding: .2rem .5rem;
+  cursor: pointer;
+}
+
+.topbar-container .topbar-right .select-city-box:hover{
+  box-shadow: 0 .5rem .6rem .1rem rgba(0, 0, 0, 0.05);
+}
+
+.topbar-container .topbar-right .select-city-box .right{
+
+}
+
+.topbar-container .topbar-right .select-city-box .right .location-icon{
+  font-size: 2.5rem;
+}
+
+.topbar-container .topbar-right .select-city-box .left{
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-container .topbar-right .select-city-box .left .select-city{
+  font-size: 1.4rem;
+}
+
+.topbar-container .topbar-right .select-city-box .left .filter-city{
+  font-size: 1.4rem;
+  color: #0079e3;
+}
+
+.topbar-container .topbar-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.topbar-container .topbar-left .circle-question-link .circle-question-icon{
+  color: var(--dark);
+  font-size: 2.5rem;
+}
+
+.topbar-container .topbar-left .login-box{
+  background-color: var(--main-color);
+  padding: .3rem 3rem;
+  border-radius: 1.3rem;
+}
+
+.topbar-container .topbar-left .login-box .login-btn{
+  color: var(--white);
+}
+
+.topbar-container .topbar-left .shopping-card{
+  display: flex;
+  align-items: center;
+}
+
+.topbar-container .topbar-left .shopping-card .shopping-card-icon{
+  font-size: 2.7rem;
+  cursor: pointer;
+}
+
+.topbar-container .topbar-left .shopping-card .shopping-count{
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}

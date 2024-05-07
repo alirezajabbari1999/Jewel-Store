@@ -1,0 +1,38 @@
+.landing-container {
+  padding: 2.5rem 0;
+}
+
+.landing-container .slider-box {
+  border-radius: 1.3rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.landing-container .swiper-slide img {
+  height: 45rem;
+  object-fit: cover; /* حفظ نسبت ابعاد تصاویر */
+  object-position: center;
+}
+
+.landing-container .small-banner {
+  height: 45rem;
+}
+
+/* این کد برای این هستش که عرض
+pagination
+فعال رو بزرگ تر کنیم */
+.swiper-pagination-bullet {
+  /* عرض پیش‌فرض برای همه پیجینیشن‌ها */
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #000000;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  /* عرض بیشتر برای پیجینیشن فعال */
+  width: 20px;
+  /* height: 20px; */
+  border-radius: 0.4rem;
+  background-color: var(--main-color);
+}

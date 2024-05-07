@@ -1,0 +1,73 @@
+.navbar-container {
+  padding: 1rem 2.5rem;
+  border-bottom: 1.7px solid #55555535;
+}
+
+.navbar-container .navbar-ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.navbar-container .navbar-ul .navbar-li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-container .navbar-ul .navbar-li .navbar-menu-icon {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navbar-container .navbar-ul .navbar-li .navbar-menu {
+  font-weight: 600;
+}
+
+.navbar-container .navbar-ul .navbar-li .navbat-li-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-container .navbar-ul .navbar-li .navbat-li-link .navbar-icon {
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+.navbar-container .navbar-ul .navbar-li .navbat-li-link .navbar-title {
+  color: var(--dark);
+  z-index: 5;
+}
+
+.navbar-container .navbar-ul .navbar-hover-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17rem;
+  height: 100%;
+  background-color: #ecebeb;
+  border-radius: 0.8rem;
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+/* این قسمت از کد مربوط به هاور آیتم های منو میباشد */
+.navbar-container .navbar-ul li:nth-child(1):hover ~ span {
+  right: 0;
+}
+.navbar-container .navbar-ul li:nth-child(2):hover ~ span {
+  right: 18.5rem;
+  width: 12rem;
+}
+.navbar-container .navbar-ul li:nth-child(3):hover ~ span {
+  right: 32rem;
+  width: 10rem;
+}
+.navbar-container .navbar-ul li:nth-child(4):hover ~ span {
+  right: 43rem;
+  width: 10rem;
+}

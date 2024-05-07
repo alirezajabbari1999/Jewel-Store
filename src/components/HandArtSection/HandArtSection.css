@@ -1,0 +1,54 @@
+.hand-art-container{
+  margin: 10rem 0 1rem;
+}
+
+.Hand-art-row{
+  background-color: var(--main-color);
+  border-radius: .5rem 6rem .5rem .5rem;
+  margin-top: 2rem;
+}
+
+.Hand-art-row .right{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+.Hand-art-row .right .desc{
+  color: #ffffffba;
+}
+
+.Hand-art-row .right .hand-art-link{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+.Hand-art-row .right .hand-art-link .link-title{
+  color: var(--white);
+  font-size: 1.7rem;
+  display: inline-block;
+}
+
+.Hand-art-row .right .hand-art-link .link-icon-box{
+  background-color: var(--main-color);
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+.Hand-art-row .right .hand-art-link .link-icon-box .link-icon{
+  color: #ffffffba;
+}
+
+.Hand-art-row .left{
+  position: relative;
+
+}
+.Hand-art-row .left .slider{
+  position: relative;
+  top: -13%;
+  left: 0;
+  margin-left: 4rem;
+}

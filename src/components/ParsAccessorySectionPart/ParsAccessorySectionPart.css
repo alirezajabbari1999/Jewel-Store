@@ -1,0 +1,31 @@
+.pars-accessory-part-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #9999995a;
+  border-radius: 2.1rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  margin: .7rem 0;
+}
+
+.pars-accessory-part-container:hover {
+  background-color: var(--main-color);
+}
+
+.pars-accessory-part-container:hover.pars-accessory-part-container .title {
+  color: var(--white);
+}
+
+.pars-accessory-part-container .image-box {
+  width: 9rem;
+}
+
+.pars-accessory-part-container .image-box img {
+  width: 100%;
+}
+
+.pars-accessory-part-container .title {
+  font-size: 1.7rem;
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+.valentine-part-container{
+  border: 1px dashed var(--white);
+  padding: .5rem;
+  border-radius: .5rem;
+  width: 6rem;
+}
+
+.valentine-part-container img{
+  width: 100%;
+}

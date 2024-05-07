@@ -1,0 +1,15 @@
+.pars-accessory-container{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pars-accessory-container .title{
+  margin-bottom: 2rem;
+}
+
+.pars-accessory-container .boxes-container{
+
+}
+.pars-accessory-container .boxes-container .link-box{
+  color: var(--dark);
+}
