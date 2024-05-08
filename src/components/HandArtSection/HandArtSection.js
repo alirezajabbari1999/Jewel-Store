@@ -12,18 +12,57 @@ import { FaMedal } from "react-icons/fa";
 export default function HandArtSection() {
   const [handArtSectionData, setHandArtSectionData] = useState([]);
 
-  useEffect(
-    () =>
-      fetch("http://localhost:1000/HandArtSectionData")
-        .then((res) => res.json())
-        .then((data) => setHandArtSectionData(data)),
-    []
-  );
+  // من اینو نوشتم ولی با کلیک روی دکمه های منو مثل فروشگاه-پرداخت و ... ارور میگرفتم
+  // این ارور رو میگرفتم error destroy is not a function
+  // useEffect(
+  //   () =>
+  //     fetch("http://localhost:1000/HandArtSectionData")
+  //       .then((res) => res.json())
+  //       .then((data) => setHandArtSectionData(data)),
+  //   []
+  // );
+
+  // این کد رو هوش مصنوعی داد بهم
+  // اینم مربوط به همون یوز افکت پایینه
+  const [cancelFetch, setCancelFetch] = useState(() => null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const controller = new AbortController();
+      const signal = controller.signal;
+
+      try {
+        const response = await fetch(
+          "http://localhost:1000/HandArtSectionData",
+          { signal }
+        );
+        const data = await response.json();
+        setHandArtSectionData(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        controller.abort();
+      }
+    };
+
+    const newCancel = fetchData();
+    setCancelFetch(newCancel);
+
+    return () => {
+      if (cancelFetch) {
+        cancelFetch();
+      }
+    };
+  }, []);
 
   return (
     <Container>
       <div className="hand-art-container">
-        <SectionsHeader className='hand-art-title' title="پيچ و خم فلز در هنر دست" icon={<FaMedal style={{color: "gold", fontSize: '2rem'}}/>}/>
+        <SectionsHeader
+          className="hand-art-title"
+          title="پيچ و خم فلز در هنر دست"
+          icon={<FaMedal style={{ color: "gold", fontSize: "2rem" }} />}
+        />
         <div className="Hand-art-row">
           <Row>
             <Col className="right" lg={4} sm={12}>

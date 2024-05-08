@@ -1,5 +1,13 @@
 .topbar-container{
   padding: 1rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  background-color: var(--white);
+}
+
+.topbar-container.scrolled{
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .topbar-container .topbar-row{

@@ -25,7 +25,95 @@
 
 .navbar-container .navbar-ul .navbar-li .navbar-menu {
   font-weight: 600;
+  position: relative;
 }
+
+
+
+/* مگا منو */
+.navbar-container .navbar-ul .navbar-li .mega-menu {
+  position: absolute;
+  top: 5.6rem;
+  background-color: var(--white);
+  width: 100%;
+  max-height: 50rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.09);
+}
+
+.navbar-container .navbar-ul .navbar-li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu.mega-menu-ul .mega-menu-li{
+  background-color: var(--white);
+  position: relative;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .mega-menu-link{
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-left: 1px solid #99999939;
+  color: #000000c7;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .mega-menu-link:hover{
+  background: linear-gradient(to left, #ffe8e8,white);
+  border-right: 3px solid #ef394e;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .mega-menu-link .mega-menu-icon{
+  font-size: 1.1rem;
+  color: #999999c0;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li span{
+  display: inline-block;
+}
+
+
+/* ساب منو */
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .submenu-ul{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 26rem;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .submenu-ul .submenu-li{
+  padding: 1rem;
+  display: none;
+  transition: all .3s ease;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li:hover .submenu-li{
+  display: block;
+}
+
+.navbar-container .navbar-ul .navbar-li .mega-menu .mega-menu-ul .mega-menu-li .submenu-ul .submenu-li .submenu-link{
+  border-right: 4px solid #ef394e;
+  color: #000;
+  font-weight: 600;
+  padding-right: .7rem;
+}
+
+
+
+
 
 .navbar-container .navbar-ul .navbar-li .navbat-li-link {
   display: flex;

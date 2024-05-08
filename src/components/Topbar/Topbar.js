@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Topbar.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "./../../Images/logo.gif";
 import { CiSearch } from "react-icons/ci";
@@ -9,8 +9,26 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function Topbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="topbar-container">
+    <div className={`topbar-container ${scrolled ? "scrolled" : ""}`}>
       <Row className="topbar-row">
         <Col className="topbar-right" lg={8}>
           <div className="topbar-logo">
@@ -37,17 +55,19 @@ export default function Topbar() {
 
         <Col className="topbar-left" lg={4}>
           <div>
-            <Link to='/shop' className="circle-question-link">
-              <BsQuestionCircle className="circle-question-icon"/>
+            <Link to="/shop" className="circle-question-link">
+              <BsQuestionCircle className="circle-question-icon" />
             </Link>
           </div>
 
           <div className="login-box">
-            <a className="login-btn" href="javascript:void(0)" >ورود/ثبت نام</a>
+            <a className="login-btn" href="javascript:void(0)">
+              ورود/ثبت نام
+            </a>
           </div>
 
           <div className="shopping-card">
-            <AiOutlineShoppingCart className="shopping-card-icon"/>
+            <AiOutlineShoppingCart className="shopping-card-icon" />
             <span className="shopping-count">0</span>
           </div>
         </Col>
