@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./TopCategories.css";
-import TopCategoriesBox from "../../TopCategoriesBox/TopCategoriesBox";
+import TopCategoriesBox from "./../TopCategoriesBox/TopCategoriesBox";
 import { Container } from "react-bootstrap";
 import SwipperSlider from "./../SwipperSlider/SwipperSlider";
 import { SwiperSlide } from "swiper/react";
@@ -22,7 +22,7 @@ export default function TopCategories() {
 
   return (
     <div>
-      <Container>
+      <Container className="full-width-container">
         {/* این کامپوننت عنوان هر سکشن رو نمایش میده */}
         <SectionsHeader title="دسته هاي برتر" />
 
@@ -32,10 +32,12 @@ export default function TopCategories() {
               slidesPerView={7}
               spaceBetween={30}
               autoplaySettings={autoplaySettings}
+              slidesPerView1200={7}
               slidesPerView992={7}
               slidesPerView768={5}
               slidesPerView576={4}
-              slidesPerView320={2}
+              slidesPerView320={4}
+              slidesPerView220={2}
             >
               {topCategoriesImg.map((item) => (
                 <SwiperSlide key={item.id}>

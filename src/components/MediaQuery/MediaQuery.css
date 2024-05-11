@@ -1,0 +1,122 @@
+@media screen and (max-width: 991px) {
+  /* این کلاس رو به کانتینر دادم که در عرض کمتر از 991 تمام عرض صفحه رو بگیره */
+  .full-width-container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 1.5rem;
+  }
+
+  .topbar-container {
+    display: none;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+
+  .mini-navbar {
+    display: block !important;
+  }
+
+  .MiniBottomNavbar {
+    display: block !important;
+  }
+
+  .hand-art-title-box {
+    display: none !important;
+  }
+
+  .Hand-art-row .row .right {
+    display: none;
+  }
+
+  .Hand-art-row {
+    padding: 1rem;
+  }
+
+  .Hand-art-row .row .left .slider {
+    margin: 0 auto;
+  }
+
+  .porbazdid-part-container {
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .porbazdid-part-container .left {
+    display: none !important;
+  }
+
+  .footer-container{
+    padding: 4rem 2.5rem 6rem !important; 
+  }
+
+  .footer-container .first-row img{
+    max-width: 10rem !important;
+  }
+  
+  .footer-container .first-row a{
+    font-size: 1.4rem;
+  }
+
+  .footer-container .second-row{
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .footer-container .second-row span{
+    font-size: 1.3rem;
+  }
+
+  .footer-container .second-row .title-box .title{
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .footer-container .third-row{
+    flex-direction: column;
+    gap: 3rem !important;
+  }
+
+  .footer-container .third-row .about-store h3{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0 !important;
+   }
+
+  .footer-container .third-row .about-store p{
+    font-size: 1.25rem !important;
+    line-height: 2.5rem;
+   }
+
+   .contact-badge-container .contact-circle .badge-title {
+    bottom: 10% !important;
+  }
+
+  .contact-badge-container .contact-badge-content{
+    bottom: 20% !important;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .small-banner-box{
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 300px) {
+  .footer-container .first-row a{
+    padding: .7rem .5rem !important;
+    text-wrap: nowrap;
+  }
+}

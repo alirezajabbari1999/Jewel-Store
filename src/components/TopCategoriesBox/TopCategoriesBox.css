@@ -3,5 +3,6 @@
 }
 
 .top-categories-box-container img{
-  width: 15rem;
+  /* width: 15rem; */
+  width: 100%;
 }

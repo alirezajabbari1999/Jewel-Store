@@ -277,55 +277,64 @@
       "id": 1,
       "title": "حلقه طلا سفید مدل ونوس",
       "price": "5600000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/1-1-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/1-1-460x460.png",
+      "link":"/"
     },
     {
       "id": 2,
       "title": "دستبند طلا مدل برموند",
       "price": "30000000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/2-1-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/2-1-460x460.png",
+      "link":"/"
     },
     {
       "id": 3,
       "title": "گل سینه رزگلد مدل الیکا",
       "price": "200000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/3-1-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/3-1-460x460.png",
+      "link":"/"
     },
     {
       "id": 4,
       "title": "گوشواره طلا مدل رجینا",
       "price": "1200000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/6-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/6-460x460.png",
+      "link":"/"
     },
     {
       "id": 5,
       "title": "انگشتر میرال با نگین زمرد",
       "price": "500000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/5-1-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/5-1-460x460.png",
+      "link":"/"
     },
     {
       "id": 6,
       "title": "انگشتر طلا مرسا الماس آبی",
       "price": "480000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/4-1-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/4-1-460x460.png",
+      "link":"/"
     },
     {
       "id": 7,
       "title": "انگشتر طلا مدل آرون",
       "price": "8700000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/8-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/8-460x460.png",
+      "link":"/"
     },
     {
       "id": 8,
       "title": "آویز گردنبند مدل لوتوس",
       "price": "15000000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/9-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/9-460x460.png",
+      "link":"/"
     },
     {
       "id": 9,
       "title": "پلاک طلا طرح لاله",
       "price": "3800000",
-      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/7-460x460.png"
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/7-460x460.png",
+      "link":"/"
     }
   ],
 

@@ -3,5 +3,6 @@
 }
 
 .top-categories-container .top-categories-row{
-  
+  margin: 0 auto;
+  justify-content: center;
 }

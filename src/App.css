@@ -1,7 +1,8 @@
 @font-face {
-  font-family: yekan;
-  src: url(./Font/Yekan.ttf);
+  font-family: shabnam;
+  src: url(./Font/ShabnamLightFD.ttf);
 }
+
 
 html {
   font-size: 62.5%;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  font-family: yekan,Arial, Helvetica, sans-serif !important;
+  font-family: shabnam,Arial, Helvetica, sans-serif !important;
   height: 100vh;
   line-height: 1.6;
   font-size: 1.6rem !important;

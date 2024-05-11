@@ -13,9 +13,9 @@ export default function ParsAccessorySection() {
   }, []);
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="pars-accessory-container">
-        <h1 className="title">دسته بندی های پارس اکسسوری</h1>
+        <h2 className="title">دسته بندی های پارس اکسسوری</h2>
 
         <div className="boxes-container">
           <Row>

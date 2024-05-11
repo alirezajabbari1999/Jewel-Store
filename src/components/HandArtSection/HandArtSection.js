@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import HandArtSliderPart from "../HandArtSliderPart/HandArtSliderPart";
-import { Swiper, SwiperSlide } from "swiper/react";
+import SwipperSlider from "../SwipperSlider/SwipperSlider";
+import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import SectionsHeader from "./../SectionsHeader/SectionsHeader";
 import { FaMedal } from "react-icons/fa";
@@ -55,17 +56,24 @@ export default function HandArtSection() {
     };
   }, []);
 
+  const autoplaySettings = {
+    delay: 2500,
+    disableOnInteraction: false,
+  };
+
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="hand-art-container">
-        <SectionsHeader
-          className="hand-art-title"
-          title="پيچ و خم فلز در هنر دست"
-          icon={<FaMedal style={{ color: "gold", fontSize: "2rem" }} />}
-        />
+        <div className="hand-art-title-box">
+          <SectionsHeader
+            className="hand-art-title"
+            title="پيچ و خم فلز در هنر دست"
+            icon={<FaMedal style={{ color: "gold", fontSize: "2rem" }} />}
+          />
+        </div>
         <div className="Hand-art-row">
-          <Row>
-            <Col className="right" lg={4} sm={12}>
+          <Row className="row">
+            <Col className="right" lg={3} sm={0}>
               <p className="desc">
                 بستن محکم و نقش پیچ آن ماندگاری واقعی را به آن می بخشد ، در حالی
                 که تفاسیر متنوع اجازه می دهد تا احساسات منحصر به فرد بیان شود.
@@ -79,38 +87,25 @@ export default function HandArtSection() {
               </Link>
             </Col>
 
-            <Col className="left" lg={8} sm={12}>
+            <Col className="left" lg={9} sm={12}>
               <div className="slider">
-                <Swiper
-                  slidesPerView={5}
-                  spaceBetween={5}
-                  className="mySwiper"
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  modules={[Autoplay]}
-                  breakpoints={{
-                    992: {
-                      slidesPerView: 4,
-                    },
-                    768: {
-                      slidesPerView: 3,
-                    },
-                    576: {
-                      slidesPerView: 2,
-                    },
-                    320: {
-                      slidesPerView: 2,
-                    },
-                  }}
+                <SwipperSlider
+                  slidesPerView={4}
+                  spaceBetween={30}
+                  autoplaySettings={autoplaySettings}
+                  slidesPerView1200={4}
+                  slidesPerView992={3}
+                  slidesPerView768={3}
+                  slidesPerView576={3}
+                  slidesPerView320={2}
+                  slidesPerView220={1}
                 >
                   {handArtSectionData.map((item) => (
                     <SwiperSlide key={item.id}>
                       <HandArtSliderPart {...item} />
                     </SwiperSlide>
                   ))}
-                </Swiper>
+                </SwipperSlider>
               </div>
             </Col>
           </Row>

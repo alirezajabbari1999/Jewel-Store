@@ -9,31 +9,31 @@ import img4 from "./../../Images/banner-4taei-04.webp";
 
 export default function BannersSection() {
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="banners-section-container">
         <Row className="banners-section-row">
-          <Col lg={3} xs={6} className="banners-section-col">
+          <Col md={3} xs={6} className="banners-section-col">
             <div className="image-container">
               <Link to="">
                 <img src={img2} alt="Banner images" />
               </Link>
             </div>
           </Col>
-          <Col lg={3} xs={6} className="banners-section-col">
+          <Col md={3} xs={6} className="banners-section-col">
             <div className="image-container">
               <Link to="">
                 <img src={img4} alt="Banner images" />
               </Link>
             </div>
           </Col>
-          <Col lg={3} xs={6} className="banners-section-col">
+          <Col md={3} xs={6} className="banners-section-col">
             <div className="image-container">
               <Link to="">
                 <img src={img3} alt="Banner images" />
               </Link>
             </div>
           </Col>
-          <Col lg={3} xs={6} className="banners-section-col">
+          <Col md={3} xs={6} className="banners-section-col">
             <div className="image-container">
               <Link to="">
                 <img src={img1} alt="Banner images" />

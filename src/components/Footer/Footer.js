@@ -17,8 +17,12 @@ export default function Footer() {
       </div>
 
       <div className="second-row">
-        <span>شماره تماس: 061-535-10225</span>
-        <span>آدرس ایمیل: info@parskala.com</span>
+        <span className="title-box">
+          <span className="title">شماره تماس:</span> 061-535-10225
+        </span>
+        <span className="title-box">
+          <span className="title">آدرس ایمیل:</span> info@parskala.com
+        </span>
         <span>هفت روز هفته ، 24 ساعت شبانه‌روز پاسخگوی شما هستیم.</span>
       </div>
 
@@ -49,10 +53,7 @@ export default function Footer() {
       <div className="fourth-row">
         <div className="copy-right">
           <span>
-            استفاده از مطالب اینترنتی پارس کالا فقط برای مقاصد غیرتجاری و با ذکر
-            منبع بلامانع است. کلیه حقوق این سایت متعلق به پارس کالا می‌باشد
-          </span>
-          <span>Copyright © 2006 - 2024 masirwp.com</span>
+          استفاده از مطالب             اینترنتی پارس کالا فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به پارس کالا می‌باشد</span>
         </div>
       </div>
     </div>

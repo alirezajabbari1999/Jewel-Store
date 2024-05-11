@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   gap: .5rem;
-  width: 60rem;
+  width: 40rem;
 }
 
 .topbar-container .topbar-right .search-box .search-icon{
@@ -55,6 +55,7 @@
 
 .topbar-container .topbar-right .search-box input::placeholder{
   color: #999;
+  font-size: 1.4rem;
 }
 
 .topbar-container .topbar-right .select-city-box{
@@ -64,12 +65,13 @@
   gap: .5rem;
   border: 2px solid var(--light-gray);
   border-radius: 1.3rem;
-  padding: .2rem .5rem;
+  padding: .6rem .5rem;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .topbar-container .topbar-right .select-city-box:hover{
-  box-shadow: 0 .5rem .6rem .1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 .5rem .6rem .05rem rgba(0, 0, 0, 0.05);
 }
 
 .topbar-container .topbar-right .select-city-box .right{
@@ -86,12 +88,14 @@
 }
 
 .topbar-container .topbar-right .select-city-box .left .select-city{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .topbar-container .topbar-right .select-city-box .left .filter-city{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #0079e3;
+  font-weight: 600;
 }
 
 .topbar-container .topbar-left{

@@ -15,7 +15,7 @@ export default function AccessoryDastband() {
   }, []);
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="accessory-dastband-container">
         <SectionsHeader title="اکسووری دستبند" btn="مشاهده بيشتر" to="/shop" />
 
@@ -23,7 +23,8 @@ export default function AccessoryDastband() {
           <SwipperSlider
             slidesPerView={5}
             spaceBetween={30}
-            slidesPerView992={4}
+            slidesPerView1200={5}
+            slidesPerView992={3}
             slidesPerView768={3}
             slidesPerView576={2}
             slidesPerView320={1}

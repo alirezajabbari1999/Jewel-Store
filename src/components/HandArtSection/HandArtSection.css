@@ -16,7 +16,9 @@
 }
 
 .Hand-art-row .right .desc{
-  color: #ffffffba;
+  color: var(--white);
+  line-height: 2.8rem;
+  font-size: 1.3rem;
 }
 
 .Hand-art-row .right .hand-art-link{
@@ -44,6 +46,7 @@
 
 .Hand-art-row .left{
   position: relative;
+  /* background-color: red; */
 
 }
 .Hand-art-row .left .slider{

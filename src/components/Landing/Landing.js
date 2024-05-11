@@ -25,13 +25,14 @@ export default function Landing() {
 
   return (
     <div className="landing-container">
-      <Container>
-        <Row>
-          <Col md={8} className="slider-box">
+      <Container className="full-width-container">
+        <Row className="row">
+          <Col md={8} xs={12} className="slider-box">
             <SwipperSlider
               slidesPerView={1}
               spaceBetween={30}
               autoplaySettings={autoplaySettings}
+              slidesPerView1200={1}
               slidesPerView992={1}
               slidesPerView768={1}
               slidesPerView576={1}
@@ -49,7 +50,7 @@ export default function Landing() {
             </SwipperSlider>
           </Col>
 
-          <Col md={4}>
+          <Col md={3} xs={12} className="small-banner-box">
             <img
               src={smallBanner}
               alt="small-banner"

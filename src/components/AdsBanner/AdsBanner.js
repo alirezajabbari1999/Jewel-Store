@@ -38,10 +38,10 @@ export default function AdsBanner() {
   }, []);
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="ads-banner-container">
         <Row>
-          <Col xs={12} lg={6}>
+          <Col xs={12} md={6}>
             <Link to="">
               <div ref={tiltRef1}>
                 <img src={banner2} alt="Banner" className="ads-img" />
@@ -49,7 +49,7 @@ export default function AdsBanner() {
             </Link>
           </Col>
 
-          <Col xs={12} lg={6}>
+          <Col xs={12} md={6}>
             <Link to="">
               <div ref={tiltRef2}>
                 <img src={banner1} alt="Banner" className="ads-img" />

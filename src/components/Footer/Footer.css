@@ -1,5 +1,5 @@
 .footer-container{
-  padding: 4rem 2.5rem;
+  padding: 4rem 2.5rem 0;
   border-top: 1.2px solid #55555535;
   margin-top: 2rem;
   display: flex;
@@ -14,7 +14,7 @@
 }
 
 .footer-container .first-row img{
-  width: 13rem;
+  max-width: 13rem;
 }
 
 .footer-container .first-row a{
@@ -54,7 +54,7 @@
 .footer-container .third-row .about-store p{
  text-align: justify;
  font-size: 1.4rem;
- color: #a1a3a8;
+ color: #81818B;
  margin-top: 1rem;
 }
 
@@ -80,9 +80,6 @@
 }
 
 .footer-container .fourth-row .copy-right{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.4rem;
-  color: #a1a3a8;
+  font-size: 1.2rem;
+  color: #81858B;
 }

@@ -13,12 +13,16 @@ import AccessoryDastband from "../../components/AccessoryDastband/AccessoryDastb
 import BannersSection from "../../components/BannersSection/BannersSection";
 import AccessoryPorbazdidSection from "../../components/AccessoryPorbazdidSection/AccessoryPorbazdidSection";
 import Footer from "../../components/Footer/Footer";
+import ContactUsBadge from "../../components/ContactUsBadge/ContactUsBadge";
+import MiniNavbar from "../../components/MiniTopNavbar/MiniNavbar";
+import MiniBottomNavbar from "../../components/MiniBottomNavbar/MiniBottomNavbar";
 
 export default function Index() {
   return (
     <div>
       <Topbar />
       <Navbar />
+      <MiniNavbar />
       <Landing />
       <TopCategories />
       <HandArtSection />
@@ -30,6 +34,8 @@ export default function Index() {
       <BannersSection />
       <AccessoryPorbazdidSection />
       <Footer />
+      <ContactUsBadge />
+      <MiniBottomNavbar />
     </div>
   );
 }

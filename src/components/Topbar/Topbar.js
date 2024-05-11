@@ -47,7 +47,7 @@ export default function Topbar() {
               <CiLocationOn className="location-icon" />
             </div>
             <div className="left">
-              <span className="select-city">انتخاب شهر</span>
+              <span className="select-city">انتخاب مكان</span>
               <span className="filter-city">فیلتر شهر</span>
             </div>
           </div>

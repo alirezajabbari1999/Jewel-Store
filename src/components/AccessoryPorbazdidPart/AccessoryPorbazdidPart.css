@@ -17,7 +17,7 @@
 
 .porbazdid-part-container .right img{
   width: 100%;
-  height: 8rem;
+  height: auto;
 }
 
 .porbazdid-part-container .left{
@@ -26,4 +26,13 @@
   justify-content: flex-start;
   color: var(--white);
   text-align: left;
+}
+
+.porbazdid-part-container .left .title{
+  width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.3rem;
+  font-weight: 600;
 }

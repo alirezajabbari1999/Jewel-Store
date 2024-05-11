@@ -15,7 +15,7 @@ export default function AccessoryGardanbandSection() {
   }, []);
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="accessory-gardanband-container">
         <SectionsHeader title="اکسووری گردنبند" btn="مشاهده بيشتر" to="/shop" />
 
@@ -23,7 +23,8 @@ export default function AccessoryGardanbandSection() {
           <SwipperSlider
             slidesPerView={5}
             spaceBetween={30}
-            slidesPerView992={4}
+            slidesPerView1200={5}
+            slidesPerView992={3}
             slidesPerView768={3}
             slidesPerView576={2}
             slidesPerView320={1}

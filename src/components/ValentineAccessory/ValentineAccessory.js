@@ -21,11 +21,11 @@ export default function ValentineAccessory() {
   };
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="valentine-section-container">
         <Row>
           <Col className="right" xs={12} lg={5}>
-            <h1 className="title">اکسسوری های مناسب کادو ولنتاین</h1>
+            <h2 className="title">اکسسوری های مناسب کادو ولنتاین</h2>
             <p className="desc">
               اگر به دنبال بهترین اکسسوری های مناسب کادو ولنتاین هستید، آوانگاره
               در این بخش یک راهنمای کامل در این خصوص آماده کرده است

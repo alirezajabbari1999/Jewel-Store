@@ -12,10 +12,12 @@ const SwipperSlider = ({
   spaceBetween,
   autoplaySettings,
   showPagination,
+  slidesPerView1200,
   slidesPerView992,
   slidesPerView768,
   slidesPerView576,
   slidesPerView320,
+  slidesPerView220,
   showNavigation,
   children,
 }) => {
@@ -29,6 +31,9 @@ const SwipperSlider = ({
       navigation={showNavigation}
       className="mySwiper"
       breakpoints={{
+        1200: {
+          slidesPerView: slidesPerView1200,
+        },
         992: {
           slidesPerView: slidesPerView992,
         },
@@ -40,6 +45,9 @@ const SwipperSlider = ({
         },
         320: {
           slidesPerView: slidesPerView320,
+        },
+        270: {
+          slidesPerView: slidesPerView220,
         },
       }}
     >

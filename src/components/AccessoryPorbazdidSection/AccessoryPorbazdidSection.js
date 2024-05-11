@@ -17,10 +17,10 @@ export default function AccessoryPorbazdidSection() {
   }, []);
 
   return (
-    <Container>
+    <Container className="full-width-container">
       <div className="porbazdid-container">
         <Row className="porbazdid-container-row">
-          <Col className="rightside" lg={8} md={12}>
+          <Col className="rightside" md={8}>
             <SectionsHeader
               title="اکسسوری های پربازدید"
               btn="مشاهده محصول"
@@ -32,6 +32,7 @@ export default function AccessoryPorbazdidSection() {
                 {accessoryProbazdidData.map((item) => (
                   <Col key={item.id} xs={4}>
                     <AccessoryPorbazdidPart
+                      link={item.link}
                       image={item.image}
                       title={item.title}
                       price={item.price}
@@ -43,7 +44,7 @@ export default function AccessoryPorbazdidSection() {
           </Col>
 
           {/* اسلایدر */}
-          <Col className="leftside" lg={3} md={12}>
+          <Col className="leftside" md={3}>
             <div className="slider-box">
               <h2 className="slider-box-title">محصولات فروش ویژه</h2>
 

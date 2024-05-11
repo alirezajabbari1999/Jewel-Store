@@ -4,8 +4,6 @@
   flex-direction: column;
   border: .15rem solid var(--main-color);
   padding: 1rem;
-  width: 20rem;
-  /* background-color: red; */
   border-radius: 2rem;
 }
 
@@ -14,13 +12,12 @@
 }
 
 .hand-art-slider-part .image{
-  /* padding: 1.5rem 0; */
   padding-bottom: 2rem;
+  text-align: center;
 }
 
 .hand-art-slider-part .image img{
-  width: 100%;
-  /* width: 12rem; */
+  width: 50%;
 }
 
 .hand-art-slider-part .info{
@@ -28,11 +25,13 @@
 }
 
 .hand-art-slider-part .info .title{
-  
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .hand-art-slider-part .info .price{
-  
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .hand-art-slider-part .icons{
