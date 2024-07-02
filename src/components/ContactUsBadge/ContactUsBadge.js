@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ContactUsBadge.css";
 import { AiFillMessage } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
@@ -8,20 +8,20 @@ import { FaTelegram } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 export default function ContactUsBadge() {
-  const [badgeActive, setBadgeActive] = useState(false);
+  const [overlyActive, setOverlyActive] = useState(false);
 
-  const badgeHandler = () => {
-    setBadgeActive(!badgeActive);
+  const overlyHandler = () => {
+    setOverlyActive(!overlyActive);
   };
-  const overlyCloseContentWayHandler = () => {
-    setBadgeActive(!badgeActive);
+  const overlyCloseHandler = () => {
+    setOverlyActive(!overlyActive);
   };
 
   return (
     <div className="contact-badge-container">
       <div
-        className={`contact-circle ${badgeActive ? "active" : ""}`}
-        onClick={() => badgeHandler()}
+        className={`contact-circle ${overlyActive ? "active" : ""}`}
+        onClick={() => overlyHandler()}
       >
         <div className="badge-title">
           <span className="icon">
@@ -79,8 +79,8 @@ export default function ContactUsBadge() {
       {/* همچنين يدونه آن كليك هم بهش دادم كه با كليك روي هر جاي صفحه
       بخش مربوط به راه هاي ارتباطي بسته شه */}
       <div
-        className={`overly ${badgeActive ? "active" : ""}`}
-        onClick={() => overlyCloseContentWayHandler()}
+        className={`overly ${overlyActive ? "active" : ""}`}
+        onClick={() => overlyCloseHandler()}
       ></div>
     </div>
   );

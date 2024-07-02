@@ -1,0 +1,92 @@
+.city-search-container{
+}
+
+.city-search-container .city-search{
+  background-color: var(--white);
+  border-radius: .6rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99999999999999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 35%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+}
+
+.city-search-container .city-search.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.city-search-container .city-search .title-row{
+  padding: 1.5rem 2.5rem .5rem;
+}
+
+.city-search-container .city-search .title-row .title{
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #2B2E38;
+}
+
+.city-search-container .city-search .input-row{
+  padding:  0rem 2.5rem;
+  border-bottom: 1px solid #e3e3e3c9;
+  padding-bottom: 1.5rem;
+}
+
+.city-search-container .city-search .input-row .input-box{
+  border: 1px solid rgba(0,0,0,.24);
+  padding:  .5rem 1.2rem;
+  border-radius: .8rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background-color: var(--white);
+}
+
+.city-search-container .city-search .input-row .input-box .search-icon{
+  font-size: 2.1rem;
+  color: rgba(0, 0, 0, 0.36);
+}
+
+.city-search-container .city-search .input-row .input-box input{
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.city-search-container .city-search .buttons-row{
+  border-top: 1px solid #e3e3e3c9;
+  padding-top: 1.5rem;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.city-search-container .city-search .buttons-row .btn{
+  padding: .7rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, .48);
+  outline: none;
+  width: 48%;
+  font-size: 1.6rem;
+}
+
+.city-search-container .city-search .buttons-row .accept-btn{
+  background-color: var(--main-color);
+  color: var(--white);
+  border: none;
+}
+
+.city-search-container .city-search .buttons-row .cancel-btn{
+  color: rgba(0, 0, 0, .56);
+  background: none;
+  border: 1px solid rgba(0, 0, 0, .48);
+  
+}

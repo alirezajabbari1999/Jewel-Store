@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "../../components/Topbar/Topbar";
 import Navbar from "../../components/Navbar/Navbar";
@@ -16,13 +16,28 @@ import Footer from "../../components/Footer/Footer";
 import ContactUsBadge from "../../components/ContactUsBadge/ContactUsBadge";
 import MiniNavbar from "../../components/MiniTopNavbar/MiniNavbar";
 import MiniBottomNavbar from "../../components/MiniBottomNavbar/MiniBottomNavbar";
+import SidebarMenu from "../../components/SidebarMenu/SidebarMenu";
 
 export default function Index() {
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+  const [isOverlyActive, setIsOverlyActive] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarActive(!isSidebarActive);
+    setIsOverlyActive(!isOverlyActive);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarActive(false);
+    setIsOverlyActive(false);
+  };
+
   return (
     <div>
       <Topbar />
       <Navbar />
-      <MiniNavbar />
+      <MiniNavbar onMenuClick={toggleSidebar} />
+      <SidebarMenu isActive={isSidebarActive} onClose={closeSidebar} />
       <Landing />
       <TopCategories />
       <HandArtSection />
@@ -36,6 +51,11 @@ export default function Index() {
       <Footer />
       <ContactUsBadge />
       <MiniBottomNavbar />
+      <div
+        className={`overly ${isOverlyActive ? "active" : ""}`}
+        onClick={closeSidebar}
+      ></div>
     </div>
   );
 }
+

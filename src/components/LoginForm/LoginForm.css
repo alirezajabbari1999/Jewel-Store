@@ -1,0 +1,136 @@
+.login-form-container{
+}
+
+.login-form-container .login-form{
+  background-color: var(--white);
+  max-width: 40rem;
+  border-radius: 1.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  z-index: 99999999999999;
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.login-form-container .login-form.active{
+  transform: translate(-50%,-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-form-container .login-form .close-btn-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 4.5rem 1rem 1rem;
+}
+
+.login-form-container .login-form .close-btn-box .title{
+  font-weight: 700;
+}
+
+.login-form-container .login-form .close-btn-box .close-btn{
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.login-form-container .login-form .close-btn-box .close-btn .icon{
+  font-size: 2.5rem;
+  color: #55555554;
+
+}
+
+.login-form-container .login-form .form-container{
+
+}
+
+.login-form-container .login-form .form-container .form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 5rem;
+}
+
+.login-form-container .login-form .form-container .form .form-row{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.login-form-container .login-form .form-container .form .form-row label{
+  color: #4D4D4D;
+  font-size: 1.4rem;
+}
+
+.login-form-container .login-form .form-container .form .form-row input{
+  border: none;
+  outline: none;
+}
+
+.login-form-container .login-form .form-container .form .form-row input::placeholder{
+  font-size: 1.4rem;
+}
+
+.login-form-container .login-form .form-container .form .form-row .input-box{
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-form-container .login-form .form-container .form .form-row .input-box .show-icon{
+  cursor: pointer;
+}
+
+.login-form-container .login-form .form-container .form .form-row .submit-btn{
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+
+.login-form-container .login-form .form-container .form .checkbox-row{
+  display: flex;
+  gap: .5rem;
+}
+
+.login-form-container .login-form .form-container .form .checkbox-row input{
+  
+}
+
+.login-form-container .login-form .form-container .form .checkbox-row label{
+  font-size: 1.4rem;
+}
+
+.login-form-container .login-form .sign-in-row{
+  border-top: 1px solid #ccc;
+  padding: 1.5rem 4.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-container .login-form .sign-in-row .question-text{
+
+}
+
+.login-form-container .login-form .sign-in-row .link{
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1.8px dotted #0071E3;
+  cursor: pointer;
+}

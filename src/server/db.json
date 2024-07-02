@@ -639,5 +639,135 @@
         }
       ]
     }
+  ],
+
+  "allProducts" :[
+    {
+      "id": 2,
+      "title": "دستبند طلا مدل برموند با سنگ ياقوت",
+      "price": 30000000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/2-1-460x460.png",
+      "count": 15,
+      "new": 2,
+      "popular": 9
+    },
+    {
+      "id": 3,
+      "title": "گل سينه رزگلد مدل اليكا",
+      "price": 200000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/3-1-460x460.png",
+      "count": 4,
+      "new": 4,
+      "popular": 5
+    },
+    {
+      "id": 4,
+      "title": "گوشواره طلا مدل رجينا با سنگ ياقوت",
+      "price": 1200000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/6-460x460.png",
+      "count": 1,
+      "new": 2,
+      "popular": 10
+    },
+    {
+      "id": 5,
+      "title": "انگشتر ميرال با نگين زمرد كبود",
+      "price": 500000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/5-1-460x460.png",
+      "count": 4,
+      "new": 1,
+      "popular": 8
+    },
+    {
+      "id": 6,
+      "title": "انگشتر طلا مرسا الماس آبي",
+      "price": 480000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/4-1-460x460.png",
+      "count": 51,
+      "new": 3,
+      "popular": 8
+    },
+    {
+      "id": 7,
+      "title": "انگشتر طلا مدل آرون با سنگ كونزايت",
+      "price": 8700000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/8-460x460.png",
+      "count": 23,
+      "new": 1,
+      "popular": 6
+    },
+    {
+      "id": 8,
+      "title": "آويز گردنبند مدل لوتوس سنگ زمرد",
+      "price": 15000000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/9-460x460.png",
+      "count":  7,
+      "new": 2,
+      "popular": 4
+    },
+    {
+      "id": 9,
+      "title": "حلقه طلا سفید مدل ونوس",
+      "price": 5600000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/1-1-460x460.png",
+      "count": 19,
+      "new": 1,
+      "popular": 5
+    },
+
+    {
+      "id": 11,
+      "title": "گل سینه رزگلد مدل الیکا",
+      "price": 200000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/3-1-460x460.png",
+      "count": 8,
+      "new": 3,
+      "popular": 7
+    },
+    {
+      "id": 12,
+      "title": "گوشواره طلا مدل رجینا",
+      "price": 1200000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/6-460x460.png",
+      "count": 3,
+      "new": 10,
+      "popular": 6
+    },
+    {
+      "id": 13,
+      "title": "انگشتر میرال با نگین زمرد",
+      "price": 500000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/5-1-460x460.png",
+      "count": 23,
+      "new": 7,
+      "popular": 10
+    },
+    {
+      "id": 14,
+      "title": "انگشتر طلا مرسا الماس آبی",
+      "price": 480000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/4-1-460x460.png",
+      "count": 15,
+      "new": 6,
+      "popular": 4
+    },
+    {
+      "id": 15,
+      "title": "انگشتر طلا مدل آرون",
+      "price": 8700000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/8-460x460.png",
+      "count": 5,
+      "new": 9,
+      "popular": 2
+    },
+    {
+      "id": 17,
+      "title": "پلاک طلا طرح لاله",
+      "price": 3800000,
+      "image": "https://gold.masirwp.com/wp-content/uploads/2023/03/7-460x460.png",
+      "count": 10,
+      "new": 10,
+      "popular": 9
+    }
   ]
 }

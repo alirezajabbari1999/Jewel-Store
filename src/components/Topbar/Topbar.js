@@ -7,9 +7,20 @@ import { CiSearch } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { BsQuestionCircle } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import LoginForm from "../LoginForm/LoginForm";
+import CitySearchBox from "../CitySearchBox/CitySearchBox";
 
 export default function Topbar() {
   const [scrolled, setScrolled] = useState(false);
+
+  // مربوط به صفحه تیره ای که با کلیک روی دکمه ورود ایجاد میشه
+  const [overlyActive, setOverlyActive] = useState(false);
+
+  // مربوط به چک کردن وضعیت بازز یا بسته بودن فرم لاگین
+  const [isLoginFormActive, setIsLoginFormActive] = useState(false);
+
+  // مربوط به چک کردن وضعیت بازز یا بسته بودن  باکس جستجوی شهر
+  const [isCitySearchBoxActive, setIsCitySearchBoxActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +37,27 @@ export default function Topbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // کدهای مربوط به اضافه کردن یا از بین بردن لایه تیره
+  const overlyHandler = () => {
+    setOverlyActive(!overlyActive);
+  };
+  const overlyCloseHandler = () => {
+    setOverlyActive(!overlyActive);
+  };
+
+  // کد مربوط به بستن فرم با دکمه بستن که روی اون قرار داره
+  const handleLoginFormClose = () => {
+    setIsLoginFormActive(false);
+    setOverlyActive(false);
+  };
+
+  // کد مربوط به بستن باکس مربوط یه سرچ شهرها
+  const citySearchBoxClose = () => {
+    setIsCitySearchBoxActive(false);
+    setOverlyActive(false);
+  };
+
 
   return (
     <div className={`topbar-container ${scrolled ? "scrolled" : ""}`}>
@@ -46,7 +78,13 @@ export default function Topbar() {
             <div className="right">
               <CiLocationOn className="location-icon" />
             </div>
-            <div className="left">
+            <div
+              className="left"
+              onClick={() => {
+                overlyHandler();
+                setIsCitySearchBoxActive(!isCitySearchBoxActive);
+              }}
+            >
               <span className="select-city">انتخاب مكان</span>
               <span className="filter-city">فیلتر شهر</span>
             </div>
@@ -60,7 +98,13 @@ export default function Topbar() {
             </Link>
           </div>
 
-          <div className="login-box">
+          <div
+            className="login-box"
+            onClick={() => {
+              overlyHandler();
+              setIsLoginFormActive(!isLoginFormActive);
+            }}
+          >
             <a className="login-btn" href="javascript:void(0)">
               ورود/ثبت نام
             </a>
@@ -72,6 +116,24 @@ export default function Topbar() {
           </div>
         </Col>
       </Row>
+
+      {/* کامپوننت مربوط به باز شدن فرم لاگین */}
+      <LoginForm isActive={isLoginFormActive} onClose={handleLoginFormClose} />
+
+      {/* کامپوننت مربوط به سرچ باکس شهر ها */}
+      <CitySearchBox
+        isActive={isCitySearchBoxActive}
+        onClose={citySearchBoxClose}
+      />
+
+      <div
+        className={`overly ${overlyActive ? "active" : ""}`}
+        onClick={() => {
+          overlyCloseHandler();
+          setIsLoginFormActive(false);
+          citySearchBoxClose();
+        }}
+      ></div>
     </div>
   );
 }
