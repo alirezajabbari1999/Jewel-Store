@@ -11,11 +11,11 @@ export default function ShopHeader({ sortProducts }) {
   };
 
   return (
-    <div className="shop-container">
+    <div className="shop-header">
       <div className="shop-road">
         <Link to="/" className="link">
           خانه
-        </Link>{" "}
+        </Link>
         / فروشگاه
       </div>
 

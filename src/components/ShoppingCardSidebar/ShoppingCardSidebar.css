@@ -1,0 +1,69 @@
+.shopping-card-sidebar{
+  width: 25%;
+  height: 100%;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 999999999;
+  transition: all 0.3s;
+}
+
+.shopping-card-sidebar.open{
+  right: 0;
+}
+
+.shopping-card-sidebar .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.shopping-card-sidebar .header .close-icon{
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.shopping-card-sidebar .content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-card-sidebar .content img{
+  width: 8rem;
+}
+
+.shopping-card-sidebar .content h3{
+  font-weight: 600;
+}
+
+.shopping-card-sidebar .content span{
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #a1a3a89e;
+  margin-top: 1.7rem;
+}
+
+.shopping-card-sidebar .content .links{
+  display: flex;
+  align-items: center;
+  margin-top: .7rem;
+}
+
+.shopping-card-sidebar .content .links .link{
+  color: #1c61e7;
+  font-size: 1.35rem;
+  padding: 0 1.5rem;
+}
+
+.shopping-card-sidebar .content .links .main-link{
+  border-left: 2px solid #a1a3a89e;
+}

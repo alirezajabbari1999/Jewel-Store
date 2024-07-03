@@ -1,20 +1,20 @@
-.shop-container{
+.shop-header{
   padding: 0 3rem;
   margin-bottom: 3rem;
 }
 
-.shop-container .shop-road{
+.shop-header .shop-road{
   color: #333;
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1rem 0 2.5rem;
 }
 
-.shop-container .shop-road .link{
+.shop-header .shop-road .link{
   color: #999;
 }
 
-.shop-container .shop-header-container{
+.shop-header .shop-header-container{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   padding-bottom: 2rem;
 }
 
-.shop-container .shop-header-container .right{
+.shop-header .shop-header-container .right{
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -30,47 +30,47 @@
   color: #4d4d4d;
 }
 
-.shop-container .shop-header-container .right .sort-title{
+.shop-header .shop-header-container .right .sort-title{
   display: flex;
   align-items: center;
   gap: .5rem;
 }
 
-.shop-container .shop-header-container .right .sort-title .sort-icon{
+.shop-header .shop-header-container .right .sort-title .sort-icon{
 
 }
 
-.shop-container .shop-header-container .right .shop-menu{
+.shop-header .shop-header-container .right .shop-menu{
   
 }
 
-.shop-container .shop-header-container .right .shop-menu ul{
+.shop-header .shop-header-container .right .shop-menu ul{
   display: flex;
   align-items: center;
   gap: 2rem;
   margin: 0;
 }
 
-.shop-container .shop-header-container .right .shop-menu ul .shop-menu-item{
+.shop-header .shop-header-container .right .shop-menu ul .shop-menu-item{
   cursor: pointer;
   font-weight: bold;
   color: #4d4d4d;
   font-size: 1.3rem;
 }
 
-.shop-container .shop-header-container .right .shop-menu ul .shop-menu-item.active{
+.shop-header .shop-header-container .right .shop-menu ul .shop-menu-item.active{
   background-color: var(--main-color);
   color: var(--white);
   padding: .5rem;
   border-radius: .5rem;
 }
 
-.shop-container .shop-header-container .left{
+.shop-header .shop-header-container .left{
   font-size: 1.4rem;
   color: #4d4d4dd4;
   font-weight: 600;
 }
 
-.shop-container .shop-header-container .left span{
+.shop-header .shop-header-container .left span{
   color: black;
 }

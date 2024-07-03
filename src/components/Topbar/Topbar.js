@@ -9,6 +9,7 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import LoginForm from "../LoginForm/LoginForm";
 import CitySearchBox from "../CitySearchBox/CitySearchBox";
+import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
 export default function Topbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,11 +17,14 @@ export default function Topbar() {
   // مربوط به صفحه تیره ای که با کلیک روی دکمه ورود ایجاد میشه
   const [overlyActive, setOverlyActive] = useState(false);
 
-  // مربوط به چک کردن وضعیت بازز یا بسته بودن فرم لاگین
+  // مربوط به چک کردن وضعیت باز یا بسته بودن فرم لاگین
   const [isLoginFormActive, setIsLoginFormActive] = useState(false);
 
-  // مربوط به چک کردن وضعیت بازز یا بسته بودن  باکس جستجوی شهر
+  // مربوط به چک کردن وضعیت باز یا بسته بودن باکس جستجوی شهر
   const [isCitySearchBoxActive, setIsCitySearchBoxActive] = useState(false);
+
+  // مربوط به چک کردن وضعیت باز یا بسته بودن سبد خریدی که بصورت ساید بار هست
+  const [isShoppingCartOpen, setIsShoppingCartOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,6 +62,18 @@ export default function Topbar() {
     setOverlyActive(false);
   };
 
+  // زمانی که روی دکمه سبد خرید کلیک شد صفحه تیره میشه و سبد خرید بصورت ساید بار باز میشه
+  const toggleShoppingCart = () => {
+    setIsShoppingCartOpen(!isShoppingCartOpen);
+    setOverlyActive(!overlyActive);
+  };
+
+  // این تابع رو بصورت آن کلیک به کامپوننت شاپینگ کارد اسلایدر دادم برای زمانیکه روی ضربدرد
+  // اسلایدر کلیک شد اسلایدر بسته شه
+  const closeShoppingCard = ()=>{
+    setIsShoppingCartOpen(false);
+    setOverlyActive(false);
+  }
 
   return (
     <div className={`topbar-container ${scrolled ? "scrolled" : ""}`}>
@@ -110,7 +126,12 @@ export default function Topbar() {
             </a>
           </div>
 
-          <div className="shopping-card">
+          <div
+            className="shopping-card"
+            onClick={() => {
+              toggleShoppingCart();
+            }}
+          >
             <AiOutlineShoppingCart className="shopping-card-icon" />
             <span className="shopping-count">0</span>
           </div>
@@ -132,8 +153,11 @@ export default function Topbar() {
           overlyCloseHandler();
           setIsLoginFormActive(false);
           citySearchBoxClose();
+          setIsShoppingCartOpen(false);
         }}
       ></div>
+
+      <ShoppingCardSidebar isOpen={isShoppingCartOpen} onClose={closeShoppingCard}/>
     </div>
   );
 }
