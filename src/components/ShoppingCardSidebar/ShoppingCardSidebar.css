@@ -5,8 +5,9 @@
   position: fixed;
   top: 0;
   right: -500px;
-  z-index: 999999999;
+  z-index: 999999999999;
   transition: all 0.3s;
+  box-shadow: 0 0 2px 1px #00000022;
 }
 
 .shopping-card-sidebar.open{
@@ -31,6 +32,9 @@
 
 .shopping-card-sidebar .content{
   height: 100%;
+}
+
+.shopping-card-sidebar .content .empty-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,4 +70,206 @@
 
 .shopping-card-sidebar .content .links .main-link{
   border-left: 2px solid #a1a3a89e;
+}
+
+.shopping-card-sidebar .content .card-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shopping-card-sidebar .content .card-items .card-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  border-bottom: 1px solid #99999925;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .delete-icon{
+  cursor: pointer;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .delete-icon .icon{
+  color: #999999c2;
+  font-size: 1.9rem;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-image{
+ 
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-image img{
+ width: 6rem;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-data{
+ display: flex;
+ flex-direction: column;
+ gap: .5rem;
+ width: 20rem;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-data h4{
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-data p{
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-counter{
+  display: flex;
+  align-items: center;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-counter button{
+  width: 2.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  padding: .8rem;
+  border: 1px solid #9999993f;
+  margin: 0;
+}
+.shopping-card-sidebar .content .card-items .card-item .item-counter .plus-btn{
+  border-radius: 0px 3px 3px 0px;
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-counter .mines-btn{
+  border-radius: 3px 0px 0px 3px;
+
+}
+
+.shopping-card-sidebar .content .card-items .card-item .item-counter span{
+width: 2.5rem;
+height: 1.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #9999993f;
+padding: .8rem;
+margin: 0;
+color: #000;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #99999925;
+  border-bottom: 1px solid #99999925;
+  padding: 1rem 0;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .note{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid #99999925;
+  padding: 0 6rem;
+  cursor: pointer;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .note .note-icon{
+  font-size: 2.2rem;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .note span,
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .copen span{
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .copen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+  cursor: pointer;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .first-row .copen .copen-icon{
+  font-size: 2.2rem;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row{
+
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .price{
+  border-bottom: 1px solid #99999925;
+  padding: 1rem 0;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .price,
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .total-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .price .price-title,
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .price .price-number{
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .total-price .total-title,
+.shopping-card-sidebar .content .card-items .sorat-hesab .second-row .total-price .total-number{
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .btns{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .btns .shop-card-btn{
+  border: none;
+  outline: none;
+  background-color: #efefef;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1.6rem;
+  border-radius: .6rem;
+  width: 85%;
+  cursor: pointer;
+  color: #333;
+  text-align: center;
+}
+
+.shopping-card-sidebar .content .card-items .sorat-hesab .btns .payment-btn{
+  border: none;
+  outline: none;
+  background-color: #EF394E;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1.6rem;
+  border-radius: .6rem;
+  width: 85%;
+  cursor: pointer;
+  text-align: center;
 }

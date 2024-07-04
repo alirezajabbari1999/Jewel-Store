@@ -6,25 +6,17 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import HandArtSliderPart from "../HandArtSliderPart/HandArtSliderPart";
 import SwipperSlider from "../SwipperSlider/SwipperSlider";
 import { SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import SectionsHeader from "./../SectionsHeader/SectionsHeader";
 import { FaMedal } from "react-icons/fa";
+import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
 export default function HandArtSection() {
   const [handArtSectionData, setHandArtSectionData] = useState([]);
+  // آیتم هایی که قراره در سبد خرید نمایش داده شن ایتدا در این استیت ذخیره میشن
+  const [cardItems, setCardItems] = useState([]);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-  // من اینو نوشتم ولی با کلیک روی دکمه های منو مثل فروشگاه-پرداخت و ... ارور میگرفتم
-  // این ارور رو میگرفتم error destroy is not a function
-  // useEffect(
-  //   () =>
-  //     fetch("http://localhost:1000/HandArtSectionData")
-  //       .then((res) => res.json())
-  //       .then((data) => setHandArtSectionData(data)),
-  //   []
-  // );
 
-  // این کد رو هوش مصنوعی داد بهم
-  // اینم مربوط به همون یوز افکت پایینه
   const [cancelFetch, setCancelFetch] = useState(() => null);
 
   useEffect(() => {
@@ -56,9 +48,15 @@ export default function HandArtSection() {
     };
   }, []);
 
+  
   const autoplaySettings = {
     delay: 2500,
     disableOnInteraction: false,
+  };
+  
+  const addToCard = (item) => {
+    setCardItems([...cardItems, item]);
+    setSidebarOpen(true);
   };
 
   return (
@@ -102,7 +100,7 @@ export default function HandArtSection() {
                 >
                   {handArtSectionData.map((item) => (
                     <SwiperSlide key={item.id}>
-                      <HandArtSliderPart {...item} />
+                      <HandArtSliderPart {...item} addToCard={addToCard} />
                     </SwiperSlide>
                   ))}
                 </SwipperSlider>
@@ -111,6 +109,12 @@ export default function HandArtSection() {
           </Row>
         </div>
       </div>
+      <ShoppingCardSidebar 
+        isOpen={isSidebarOpen} 
+        onClose={() => setSidebarOpen(false)} 
+        cardItems={cardItems} 
+      />
     </Container>
   );
 }
+

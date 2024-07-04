@@ -4,27 +4,25 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function HandArtSliderPart({
+  id,
   title,
   price,
   image,
   rate,
   noBorder,
+  addToCard
 }) {
   return (
     <div className={`hand-art-slider-part ${noBorder && "no-border"}`}>
-      <Link to="" className="hand-art-link">
+      <div className="hand-art-link">
         <div className="image">
-          <img src={image} />
+          <img src={image} alt={title}/>
         </div>
 
         <div className="info">
           <div className="title">{title}</div>
-
-          {/* در كد پايين براي اينكه قيمت ها بصورت اعداد 3 تايي از هم جدا بشن و كاما بينشون قرار بگيره
-        ابتدا قيمت رو كه تايپش استرينگ هست به نامبر تبديل كرديم و سپس بقيه فرآيند */}
           <div className="price">
             {parseFloat(price.replace(/[^0-9.]/g, "")).toLocaleString("fa-IR", {
               maximumFractionDigits: 2,
@@ -35,7 +33,10 @@ export default function HandArtSliderPart({
         </div>
 
         <div className="icons">
-          <AiOutlineShoppingCart className="shopping-card" />
+          <AiOutlineShoppingCart 
+            className="shopping-card" 
+            onClick={() => addToCard({id,title, price, image, rate})} 
+          />
           <CiSearch className="search-icon" />
           <IoIosHeartEmpty className="heart-icon" />
           <span className="rate">
@@ -43,7 +44,7 @@ export default function HandArtSliderPart({
             <FaStar className="star-icon" />
           </span>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }
