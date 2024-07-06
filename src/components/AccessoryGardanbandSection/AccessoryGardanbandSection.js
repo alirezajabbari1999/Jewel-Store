@@ -5,19 +5,31 @@ import { Container } from "react-bootstrap";
 import SwipperSlider from "../SwipperSlider/SwipperSlider";
 import { SwiperSlide } from "swiper/react";
 import HandArtSliderPart from "../HandArtSliderPart/HandArtSliderPart";
+import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-export default function AccessoryGardanbandSection() {
+export default function AccessoryGardanbandSection({ cardItems,setCardItems }) {
   const [accessoryGardanbandData, setAccessoryGardanbandData] = useState([]);
+  const [isShoppingCardSidebarOpen, setIsShoppingCardSidebarOpen] = useState(false);
+
   useEffect(() => {
     fetch("http://localhost:1000/accessoryGardanbandData")
       .then((res) => res.json())
       .then((data) => setAccessoryGardanbandData(data));
   }, []);
 
+  const addToCard = (item) => {
+    setCardItems((prevItems) => [...prevItems, item]);
+    setIsShoppingCardSidebarOpen(true);
+  };
+
   return (
     <Container className="full-width-container">
       <div className="accessory-gardanband-container">
-        <SectionsHeader title="اکسووری گردنبند" btn="مشاهده بيشتر" to="/shop" />
+        <SectionsHeader
+          title="اکسووری گردنبند"
+          btn="مشاهده بيشتر"
+          to="/shop"
+        />
 
         <div className="accessory-gardanband-slider">
           <SwipperSlider
@@ -30,13 +42,19 @@ export default function AccessoryGardanbandSection() {
             slidesPerView320={1}
           >
             {accessoryGardanbandData.map((item) => (
-              <SwiperSlide>
-                <HandArtSliderPart {...item} noBorder/>
+              <SwiperSlide key={item.id}>
+                <HandArtSliderPart {...item} addToCard={addToCard} noBorder />
               </SwiperSlide>
             ))}
           </SwipperSlider>
         </div>
       </div>
+      <ShoppingCardSidebar
+        isOpen={isShoppingCardSidebarOpen}
+        onClose={() => setIsShoppingCardSidebarOpen(false)}
+        cardItems={cardItems}
+        setCardItems={setCardItems}
+      />
     </Container>
   );
 }

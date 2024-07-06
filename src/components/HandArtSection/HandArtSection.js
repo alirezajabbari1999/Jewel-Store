@@ -10,53 +10,23 @@ import SectionsHeader from "./../SectionsHeader/SectionsHeader";
 import { FaMedal } from "react-icons/fa";
 import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-export default function HandArtSection() {
+export default function HandArtSection({ cardItems,setCardItems,isShoppingCardSidebarOpen ,setIsShoppingCardSidebarOpen }) {
   const [handArtSectionData, setHandArtSectionData] = useState([]);
-  // آیتم هایی که قراره در سبد خرید نمایش داده شن ایتدا در این استیت ذخیره میشن
-  const [cardItems, setCardItems] = useState([]);
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-
-
-  const [cancelFetch, setCancelFetch] = useState(() => null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const controller = new AbortController();
-      const signal = controller.signal;
-
-      try {
-        const response = await fetch(
-          "http://localhost:1000/HandArtSectionData",
-          { signal }
-        );
-        const data = await response.json();
-        setHandArtSectionData(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        controller.abort();
-      }
-    };
-
-    const newCancel = fetchData();
-    setCancelFetch(newCancel);
-
-    return () => {
-      if (cancelFetch) {
-        cancelFetch();
-      }
-    };
+    fetch("http://localhost:1000/HandArtSectionData")
+      .then((res) => res.json())
+      .then((data) => setHandArtSectionData(data));
   }, []);
 
-  
+  const addToCard = (item) => {
+    setCardItems((prevItems) => [...prevItems, item]);
+    setIsShoppingCardSidebarOpen(true);
+  };
+
   const autoplaySettings = {
     delay: 2500,
     disableOnInteraction: false,
-  };
-  
-  const addToCard = (item) => {
-    setCardItems([...cardItems, item]);
-    setSidebarOpen(true);
   };
 
   return (
@@ -109,12 +79,12 @@ export default function HandArtSection() {
           </Row>
         </div>
       </div>
-      <ShoppingCardSidebar 
-        isOpen={isSidebarOpen} 
-        onClose={() => setSidebarOpen(false)} 
-        cardItems={cardItems} 
+      <ShoppingCardSidebar
+        isOpen={isShoppingCardSidebarOpen}
+        onClose={() => setIsShoppingCardSidebarOpen(false)}
+        cardItems={cardItems}
+        setCardItems={setCardItems}
       />
     </Container>
   );
 }
-

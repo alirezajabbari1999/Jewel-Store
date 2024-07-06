@@ -22,6 +22,10 @@ export default function Index() {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [isOverlyActive, setIsOverlyActive] = useState(false);
 
+  const [cardItems, setCardItems] = useState([]);
+  const [isShoppingCardSidebarOpen, setIsShoppingCardSidebarOpen] =
+    useState(false);
+
   const toggleSidebar = () => {
     setIsSidebarActive(!isSidebarActive);
     setIsOverlyActive(!isOverlyActive);
@@ -34,18 +38,33 @@ export default function Index() {
 
   return (
     <div>
-      <Topbar />
+      <Topbar setCardItems={setCardItems} cardItems={cardItems} />
       <Navbar />
       <MiniNavbar onMenuClick={toggleSidebar} />
       <SidebarMenu isActive={isSidebarActive} onClose={closeSidebar} />
       <Landing />
       <TopCategories />
-      <HandArtSection />
+      <HandArtSection
+        setCardItems={setCardItems}
+        cardItems={cardItems}
+        isShoppingCardSidebarOpen={isShoppingCardSidebarOpen}
+        setIsShoppingCardSidebarOpen={setIsShoppingCardSidebarOpen}
+      />
       <ValentineAccessory />
       <ParsAccessorySection />
-      <AccessoryGardanbandSection />
+      <AccessoryGardanbandSection
+        setCardItems={setCardItems}
+        cardItems={cardItems}
+        shoppingCardSidebarOpen={isShoppingCardSidebarOpen}
+        setIsShoppingCardSidebarOpen={setIsShoppingCardSidebarOpen}
+      />
       <AdsBanner />
-      <AccessoryDastband />
+      <AccessoryDastband
+        setCardItems={setCardItems}
+        cardItems={cardItems}
+        shoppingCardSidebarOpen={isShoppingCardSidebarOpen}
+        setIsShoppingCardSidebarOpen={setIsShoppingCardSidebarOpen}
+      />
       <BannersSection />
       <AccessoryPorbazdidSection />
       <Footer />
@@ -58,4 +77,3 @@ export default function Index() {
     </div>
   );
 }
-

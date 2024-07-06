@@ -11,14 +11,13 @@ export default function HandArtSliderPart({
   price,
   image,
   rate,
-  noBorder,
-  addToCard
+  addToCard,
 }) {
   return (
-    <div className={`hand-art-slider-part ${noBorder && "no-border"}`}>
+    <div className={`hand-art-slider-part`}>
       <div className="hand-art-link">
         <div className="image">
-          <img src={image} alt={title}/>
+          <img src={image} alt={title} />
         </div>
 
         <div className="info">
@@ -27,15 +26,15 @@ export default function HandArtSliderPart({
             {parseFloat(price.replace(/[^0-9.]/g, "")).toLocaleString("fa-IR", {
               maximumFractionDigits: 2,
               grouping: true,
-            })}{" "}
+            })}
             تومان
           </div>
         </div>
 
         <div className="icons">
-          <AiOutlineShoppingCart 
-            className="shopping-card" 
-            onClick={() => addToCard({id,title, price, image, rate})} 
+          <AiOutlineShoppingCart
+            className="shopping-card"
+            onClick={() => addToCard({ id, title, price, image, rate })}
           />
           <CiSearch className="search-icon" />
           <IoIosHeartEmpty className="heart-icon" />

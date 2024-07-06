@@ -11,7 +11,9 @@ import LoginForm from "../LoginForm/LoginForm";
 import CitySearchBox from "../CitySearchBox/CitySearchBox";
 import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-export default function Topbar() {
+// این کاردز آیتم هایی که به عنوان پراپ دادم رو در کامپوننت ایندکس ساختم و قراره آیتم هایی که میخواد به سبد خرید 
+// اضافه شه توش ذخیره شه
+export default function Topbar({cardItems,setCardItems}) {
   const [scrolled, setScrolled] = useState(false);
 
   // مربوط به صفحه تیره ای که با کلیک روی دکمه ورود ایجاد میشه
@@ -25,6 +27,7 @@ export default function Topbar() {
 
   // مربوط به چک کردن وضعیت باز یا بسته بودن سبد خریدی که بصورت ساید بار هست
   const [isShoppingCartOpen, setIsShoppingCartOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,10 +73,10 @@ export default function Topbar() {
 
   // این تابع رو بصورت آن کلیک به کامپوننت شاپینگ کارد اسلایدر دادم برای زمانیکه روی ضربدرد
   // اسلایدر کلیک شد اسلایدر بسته شه
-  const closeShoppingCard = ()=>{
+  const closeShoppingCard = () => {
     setIsShoppingCartOpen(false);
     setOverlyActive(false);
-  }
+  };
 
   return (
     <div className={`topbar-container ${scrolled ? "scrolled" : ""}`}>
@@ -133,7 +136,7 @@ export default function Topbar() {
             }}
           >
             <AiOutlineShoppingCart className="shopping-card-icon" />
-            <span className="shopping-count">0</span>
+            <span className="shopping-count">{cardItems.length}</span>
           </div>
         </Col>
       </Row>
@@ -157,7 +160,12 @@ export default function Topbar() {
         }}
       ></div>
 
-      <ShoppingCardSidebar isOpen={isShoppingCartOpen} onClose={closeShoppingCard}/>
+      <ShoppingCardSidebar
+        isOpen={isShoppingCartOpen}
+        onClose={closeShoppingCard}
+        cardItems={cardItems}
+        setCardItems={setCardItems}
+      />
     </div>
   );
 }
