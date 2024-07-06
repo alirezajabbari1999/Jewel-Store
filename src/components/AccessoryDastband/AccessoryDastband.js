@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
-import "./AccessoryDastband.css";
 import SectionsHeader from "../SectionsHeader/SectionsHeader";
 import { Container } from "react-bootstrap";
 import SwipperSlider from "../SwipperSlider/SwipperSlider";
 import { SwiperSlide } from "swiper/react";
 import HandArtSliderPart from "../HandArtSliderPart/HandArtSliderPart";
-import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-export default function AccessoryDastband({ cardItems,setCardItems,isShoppingCardSidebarOpen ,setIsShoppingCardSidebarOpen }) {
+export default function AccessoryDastband({ cardItems, setCardItems, setIsShoppingCardSidebarOpen }) {
   const [accessoryDastbandData, setAccessoryDastbandData] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:1000/accessoryDastbandData")
       .then((res) => res.json())
       .then((data) => setAccessoryDastbandData(data));
   }, []);
-
 
   const addToCard = (item) => {
     setCardItems((prevItems) => [...prevItems, item]);
@@ -37,19 +35,13 @@ export default function AccessoryDastband({ cardItems,setCardItems,isShoppingCar
             slidesPerView320={1}
           >
             {accessoryDastbandData.map((item) => (
-              <SwiperSlide>
+              <SwiperSlide key={item.id}>
                 <HandArtSliderPart {...item} addToCard={addToCard} noBorder />
               </SwiperSlide>
             ))}
           </SwipperSlider>
         </div>
       </div>
-      <ShoppingCardSidebar
-        isOpen={isShoppingCardSidebarOpen}
-        onClose={() => setIsShoppingCardSidebarOpen(false)}
-        cardItems={cardItems}
-        setCardItems={setCardItems}
-      />
     </Container>
   );
 }

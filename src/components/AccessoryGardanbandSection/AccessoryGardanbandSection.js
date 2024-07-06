@@ -5,11 +5,9 @@ import { Container } from "react-bootstrap";
 import SwipperSlider from "../SwipperSlider/SwipperSlider";
 import { SwiperSlide } from "swiper/react";
 import HandArtSliderPart from "../HandArtSliderPart/HandArtSliderPart";
-import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-export default function AccessoryGardanbandSection({ cardItems,setCardItems }) {
+export default function AccessoryGardanbandSection({ cardItems, setCardItems, setIsShoppingCardSidebarOpen }) {
   const [accessoryGardanbandData, setAccessoryGardanbandData] = useState([]);
-  const [isShoppingCardSidebarOpen, setIsShoppingCardSidebarOpen] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:1000/accessoryGardanbandData")
@@ -49,12 +47,6 @@ export default function AccessoryGardanbandSection({ cardItems,setCardItems }) {
           </SwipperSlider>
         </div>
       </div>
-      <ShoppingCardSidebar
-        isOpen={isShoppingCardSidebarOpen}
-        onClose={() => setIsShoppingCardSidebarOpen(false)}
-        cardItems={cardItems}
-        setCardItems={setCardItems}
-      />
     </Container>
   );
 }

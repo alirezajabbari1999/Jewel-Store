@@ -11,23 +11,13 @@ import LoginForm from "../LoginForm/LoginForm";
 import CitySearchBox from "../CitySearchBox/CitySearchBox";
 import ShoppingCardSidebar from "../ShoppingCardSidebar/ShoppingCardSidebar";
 
-// این کاردز آیتم هایی که به عنوان پراپ دادم رو در کامپوننت ایندکس ساختم و قراره آیتم هایی که میخواد به سبد خرید 
-// اضافه شه توش ذخیره شه
-export default function Topbar({cardItems,setCardItems}) {
+export default function Topbar({ cardItems, setCardItems }) {
   const [scrolled, setScrolled] = useState(false);
-
-  // مربوط به صفحه تیره ای که با کلیک روی دکمه ورود ایجاد میشه
   const [overlyActive, setOverlyActive] = useState(false);
-
-  // مربوط به چک کردن وضعیت باز یا بسته بودن فرم لاگین
   const [isLoginFormActive, setIsLoginFormActive] = useState(false);
-
-  // مربوط به چک کردن وضعیت باز یا بسته بودن باکس جستجوی شهر
   const [isCitySearchBoxActive, setIsCitySearchBoxActive] = useState(false);
-
-  // مربوط به چک کردن وضعیت باز یا بسته بودن سبد خریدی که بصورت ساید بار هست
   const [isShoppingCartOpen, setIsShoppingCartOpen] = useState(false);
-
+  const [cartItemCount, setCartItemCount] = useState(cardItems.length); // New state for cart item count
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,34 +35,34 @@ export default function Topbar({cardItems,setCardItems}) {
     };
   }, []);
 
-  // کدهای مربوط به اضافه کردن یا از بین بردن لایه تیره
+  // Update cart item count when cardItems prop changes
+  useEffect(() => {
+    setCartItemCount(cardItems.length);
+  }, [cardItems]);
+
   const overlyHandler = () => {
     setOverlyActive(!overlyActive);
   };
+
   const overlyCloseHandler = () => {
-    setOverlyActive(!overlyActive);
+    setOverlyActive(false);
   };
 
-  // کد مربوط به بستن فرم با دکمه بستن که روی اون قرار داره
   const handleLoginFormClose = () => {
     setIsLoginFormActive(false);
     setOverlyActive(false);
   };
 
-  // کد مربوط به بستن باکس مربوط یه سرچ شهرها
   const citySearchBoxClose = () => {
     setIsCitySearchBoxActive(false);
     setOverlyActive(false);
   };
 
-  // زمانی که روی دکمه سبد خرید کلیک شد صفحه تیره میشه و سبد خرید بصورت ساید بار باز میشه
   const toggleShoppingCart = () => {
     setIsShoppingCartOpen(!isShoppingCartOpen);
     setOverlyActive(!overlyActive);
   };
 
-  // این تابع رو بصورت آن کلیک به کامپوننت شاپینگ کارد اسلایدر دادم برای زمانیکه روی ضربدرد
-  // اسلایدر کلیک شد اسلایدر بسته شه
   const closeShoppingCard = () => {
     setIsShoppingCartOpen(false);
     setOverlyActive(false);
@@ -136,15 +126,13 @@ export default function Topbar({cardItems,setCardItems}) {
             }}
           >
             <AiOutlineShoppingCart className="shopping-card-icon" />
-            <span className="shopping-count">{cardItems.length}</span>
+            <span className="shopping-count">{cartItemCount}</span> {/* Display cart item count from state */}
           </div>
         </Col>
       </Row>
 
-      {/* کامپوننت مربوط به باز شدن فرم لاگین */}
       <LoginForm isActive={isLoginFormActive} onClose={handleLoginFormClose} />
 
-      {/* کامپوننت مربوط به سرچ باکس شهر ها */}
       <CitySearchBox
         isActive={isCitySearchBoxActive}
         onClose={citySearchBoxClose}
@@ -169,3 +157,5 @@ export default function Topbar({cardItems,setCardItems}) {
     </div>
   );
 }
+
+
