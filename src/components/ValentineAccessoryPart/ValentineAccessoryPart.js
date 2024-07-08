@@ -4,7 +4,7 @@ import "./ValentineAccessoryPart.css";
 export default function ValentineAccessoryPart({ image }) {
   return (
     <div className="valentine-part-container">
-      <img src={image} alt="" />
+      <img src={image} alt="image of valentine section" />
     </div>
   );
 }

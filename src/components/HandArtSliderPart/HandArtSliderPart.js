@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function HandArtSliderPart({
   id,
@@ -17,7 +18,9 @@ export default function HandArtSliderPart({
     <div className={`hand-art-slider-part`}>
       <div className="hand-art-link">
         <div className="image">
-          <img src={image} alt={title} />
+          <Link to="/product">
+            <img src={image} alt={title} />
+          </Link>
         </div>
 
         <div className="info">

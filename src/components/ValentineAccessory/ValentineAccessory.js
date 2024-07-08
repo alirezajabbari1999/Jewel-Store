@@ -12,7 +12,10 @@ export default function ValentineAccessory() {
   useEffect(() => {
     fetch("http://localhost:1000/valentineSectionImg")
       .then((res) => res.json())
-      .then((data) => setValentineAccessoryData(data));
+      .then((data) =>{
+        setValentineAccessoryData(data)
+        console.log(data)
+      } );
   }, []);
 
   const autoplaySettings = {
@@ -43,7 +46,7 @@ export default function ValentineAccessory() {
               slidesPerView320={3}
             >
               {valentineAccessoryData.map((item) => (
-                <SwiperSlide>
+                <SwiperSlide key={item.id}>
                   <ValentineAccessoryPart image={item.image} />
                 </SwiperSlide>
               ))}
