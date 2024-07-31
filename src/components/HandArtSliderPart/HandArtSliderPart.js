@@ -17,22 +17,25 @@ export default function HandArtSliderPart({
   return (
     <div className={`hand-art-slider-part`}>
       <div className="hand-art-link">
-        <div className="image">
-          <Link to="/product">
+        <Link to={`/product/${id}`} className="link">
+          <div className="image">
             <img src={image} alt={title} />
-          </Link>
-        </div>
-
-        <div className="info">
-          <div className="title">{title}</div>
-          <div className="price">
-            {parseFloat(price.replace(/[^0-9.]/g, "")).toLocaleString("fa-IR", {
-              maximumFractionDigits: 2,
-              grouping: true,
-            })}
-            تومان
           </div>
-        </div>
+
+          <div className="info">
+            <div className="title">{title}</div>
+            <div className="price">
+              {parseFloat(price.replace(/[^0-9.]/g, "")).toLocaleString(
+                "fa-IR",
+                {
+                  maximumFractionDigits: 2,
+                  grouping: true,
+                }
+              )}
+              تومان
+            </div>
+          </div>
+        </Link>
 
         <div className="icons">
           <AiOutlineShoppingCart

@@ -15,6 +15,10 @@
   color: #000;
 }
 
+.hand-art-slider-part .hand-art-link .link{
+  color: inherit;
+}
+
 .hand-art-slider-part .hand-art-link .image {
   padding-bottom: 2rem;
   text-align: center;
